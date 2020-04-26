@@ -1,0 +1,44 @@
+
+  //var userChoices = ['rock', 'paper', 'scissors'];
+  var userInput = prompt("do you choose rock, paper, or siccors");
+  var programChoices = [0, 1, 2];
+  var programInput = programChoices[(Math.floor(Math.random() * programChoices.length))]
+  if (programInput === programChoices[0]) {
+    programInput = 'rock';
+  } else if (programInput === programChoices[1]) {
+    programInput = 'paper';
+  } else {
+    programInput = 'scissors';
+  }
+  console.log(programInput); 
+
+var compare = function(choice1, choice2) {
+    if (choice1 == choice2) {
+      return'its a tie';
+    }
+    if (choice1 == 'rock') {
+      if (choice2 == programInput[2]) {
+        return'rock wins'
+      } else {
+        return'paper wins';
+      }
+    }
+    if (choice1 == 'paper') {
+      if (choice2 == programInput[0]) {
+        return'paper wins'
+      } else {
+        return'scissors win'
+      }
+    }
+    if (choice1 == 'scissors') {
+      if (choice2 == programInput[0]) {
+          return'rock wins';
+        } else {
+          return'scissors win';
+        }
+      }
+  
+};
+
+console.log(compare(userInput, programInput));
+    
